@@ -23,3 +23,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/simpan', [App\Http\Controllers\HomeController::class, 'simpan'])->name('simpan');
 Route::get('/ubah/{idkegiatan}/{status}', [App\Http\Controllers\HomeController::class, 'ubahStatus'])->name('ubahStatus');
 Route::get('/hapus/{id}', [App\Http\Controllers\HomeController::class, 'hapus'])->name('hapus');
+Route::get('/edit{id}', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
+Route::put('/editproses/{id}', action: [App\Http\Controllers\HomeController::class, 'editproses'])->name('editproses');
+
+
+
